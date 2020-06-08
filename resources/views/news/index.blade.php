@@ -1,6 +1,11 @@
 @extends('layouts.front')
 
 @section('content')
+    <!--追加-->
+    <div class="col-md-4">
+        <a href="{{ action('Admin\NewsController@add') }}" role="button" class="btn btn-primary">新規作成</a>
+    </div>
+    
     <div class="container">
         <hr color="#c0c0c0">
         @if (!is_null($headline))

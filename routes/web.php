@@ -46,6 +46,7 @@ Route::group(['prefix' => 'admin', 'middleware'=>'auth'], function() {
     'Admin\ProfileControlle@delete');
     
     
+    
 });
 
 Auth::routes();

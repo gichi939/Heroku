@@ -16,6 +16,7 @@ class NewsController extends Controller
   {
       return view('admin.news.create');
   }
+  
 
   public function create(Request $request)
   {
@@ -39,8 +40,9 @@ class NewsController extends Controller
       // データベースに保存する
       $news->fill($form);
       $news->save();
-
-      return redirect('admin/news/create');
+      
+      // admin/newsにいくように変更
+      return redirect('admin/news/');
   }
 
   public function index(Request $request)

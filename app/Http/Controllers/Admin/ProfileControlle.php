@@ -34,8 +34,9 @@ class ProfileControlle extends Controller
         // $profile->gender = $request->gender;
         $profile->fill($form);
         $profile->save();
-          
-        return redirect('admin/profile/create');
+        
+        // admin/profile/にいくように変更
+        return redirect('admin/profile/');
         
     }
     

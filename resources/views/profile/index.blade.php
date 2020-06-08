@@ -1,6 +1,11 @@
 @extends('layouts.front')
 
 @section('content')
+    <!--追加-->
+    <div class="col-md-4">
+        <a href="{{ action('Admin\ProfileControlle@add') }}" role="button" class="btn btn-primary">新規作成</a>
+    </div>
+    
     <div class="container">
         <hr color="#c0c0c0">
         @if (!is_null($headline))
@@ -9,11 +14,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="caption mx-auto">
-                                <!--<div class="image">-->
-                                <!--    @if ($headline->image_path)-->
-                                <!--        <img src="{{ asset('storage/image/' . $headline->image_path) }}">-->
-                                <!--    @endif-->
-                                <!--</div>-->
+                                
                                 <div class="name p-2">
                                     <h1>{{ str_limit($headline->name, 70) }}</h1>
                                 </div>
